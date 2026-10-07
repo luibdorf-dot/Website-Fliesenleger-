@@ -1,34 +1,27 @@
-# Website Fliesenleger Cottbus
+# Website Fliesenleger Roman Delev, Cottbus
 
-Statische One-Page-Website für einen Fliesenleger in Cottbus – ausgerichtet auf **mehr Anfragen und Aufträge**.
-Kein Build-Schritt nötig: `index.html` im Browser öffnen oder den Ordner bei einem beliebigen Webhoster hochladen
-(z. B. GitHub Pages, Netlify, Strato, IONOS).
+Mobilfreundlicher One-Pager für einen Fliesenleger-Betrieb in Cottbus – Ziel: mehr Anfragen und Aufträge.
+Nur HTML, CSS und etwas JavaScript, keine Frameworks, keine externen Dateien. Zum Ansehen `index.html`
+im Browser öffnen; zum Veröffentlichen den Ordner bei einem Webhoster hochladen (z. B. GitHub Pages, Netlify, IONOS).
 
 ## Aufbau
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Startseite: Hero mit Schnellanfrage, Leistungen, Vorteile, Ablauf, Referenzen, Kundenstimmen, Einzugsgebiet, FAQ, Kontaktformular |
-| `impressum.html`, `datenschutz.html` | Rechtliche Seiten (Vorlagen) |
-| `css/style.css` | Gestaltung; Farben oben als Variablen (`--c-primary`, `--c-accent`) |
-| `js/main.js` | Mobilmenü und Formularversand; oben `CONTACT_EMAIL` und `FORM_ENDPOINT` |
+| `index.html` | Start, Leistungen, Über uns, Referenzen, Ablauf, Kontakt, Footer |
+| `css/style.css` | Design – Farben oben als Variablen (`--navy`, `--grey`, `--accent`) |
+| `js/main.js` | Mobilmenü, aktiver Menüpunkt, Formularprüfung und -versand (`CONTACT_EMAIL`, `FORM_ENDPOINT`) |
+| `img/` | Favicon und Platzhalterbilder |
+| `impressum.html`, `datenschutz.html` | Vorlagen der Pflichtseiten |
 
-## Was auf Anfragen optimiert ist
+## Vor dem Livegang ersetzen
 
-- Telefonnummer und „Angebot anfragen“ immer sichtbar (Kopfzeile, auf dem Handy feste Leiste unten)
-- Kurzes Rückruf-Formular direkt im ersten Bildschirm, ausführliches Formular am Ende
-- Vertrauenselemente: Festpreis, kostenlose Besichtigung, Ablauf in 4 Schritten, Kundenstimmen, FAQ
-- Lokale Suchmaschinenoptimierung: „Fliesenleger Cottbus“ in Titel/Überschriften, Orte im Umkreis, strukturierte Daten (schema.org)
-
-## Vor dem Livegang ersetzen (Platzhalter)
-
-- [ ] Firmenname „Fliesen Mustermann“ (überall per Suchen & Ersetzen)
-- [ ] Telefon `0355 123 456 78` / `+4935512345678` und E-Mail `kontakt@fliesenleger-beispiel.de` (ausgedacht)
-- [ ] Zahlen in der Vertrauensleiste (Jahre Erfahrung, Projekte) – nur echte Werte angeben
-- [ ] Referenzbilder: echte Projektfotos in `img/` ablegen und in den `<figure>` als `<img>` einsetzen
-- [ ] Kundenstimmen: nur echte Bewertungen verwenden (erfundene Bewertungen sind wettbewerbswidrig)
-- [ ] Gelbe „Platzhalter“-Hinweise entfernen
-- [ ] Impressum und Datenschutzerklärung vollständig ausfüllen
-- [ ] Domain in `canonical` und JSON-LD (`index.html`) anpassen
-- [ ] Formularversand: Standard öffnet das E-Mail-Programm des Besuchers. Besser: kostenlosen Dienst wie Formspree oder Web3Forms einrichten und die URL in `js/main.js` bei `FORM_ENDPOINT` eintragen
-- [ ] Google-Unternehmensprofil anlegen/pflegen – bringt bei Handwerkern oft die meisten Anfragen
+- [ ] Telefon `0355 123 456 78` / `+4935512345678`, E-Mail `kontakt@fliesenleger-delev-beispiel.de` und Adresse `Musterstraße 1` (alle ausgedacht) – per Suchen & Ersetzen in allen HTML-Dateien und `js/main.js`
+- [ ] Öffnungszeiten prüfen (Platzhalter: Mo–Fr 7–17 Uhr)
+- [ ] „Über uns“-Text und Foto (`img/portrait-platzhalter.svg`)
+- [ ] Referenzfotos: echte Bilder z. B. als `img/referenz-1.jpg` ablegen und in `index.html` den Dateinamen anpassen (Bilder vorher auf ca. 1200 px Breite verkleinern)
+- [ ] Gelbe Platzhalter-Hinweise entfernen
+- [ ] Impressum und Datenschutzerklärung vervollständigen
+- [ ] Domain in `canonical` und in den Firmendaten (JSON-LD) in `index.html` anpassen
+- [ ] Formular: Standard öffnet das E-Mail-Programm. Besser einen Dienst wie Formspree einrichten und die Adresse in `js/main.js` bei `FORM_ENDPOINT` eintragen (dann Datenschutzerklärung ergänzen)
+- [ ] Google-Unternehmensprofil anlegen und auf die Website verlinken
